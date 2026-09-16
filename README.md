@@ -118,12 +118,20 @@ Também foram estudadas técnicas de auditoria e proteção de dados no contexto
 
 ---
 
-## Índices e Otimização
+---
 
-Foram criados índices para melhorar o desempenho das consultas.
+## Disaster Recovery
 
-Um dos índices implementados foi:
+O projeto possui um plano de Disaster Recovery documentado no ficheiro `disaster_recovery.md`.
 
-```sql
+O plano inclui:
+
+- Procedimentos de backup;
+- Recuperação através das funcionalidades do Neon;
+- Testes de recuperação;
+- Estratégia 3-2-1;
+- Procedimentos para situações de emergência;
+- Segurança das credenciais;
+- Scripts SQL para reconstrução da estrutura da base de dados.
 CREATE INDEX idx_utilizador_nome
 ON Utilizadores(nome);
