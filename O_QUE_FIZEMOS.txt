@@ -1,0 +1,123 @@
+REGISTO DE MELHORIAS - 2026
+
+UFCD 10797 - Gestão e Armazenamento de Dados
+
+Projeto: Organização de Dados
+
+
+1. ORGANIZAÇÃO DA BASE DE DADOS
+
+Foi criada uma estrutura de base de dados PostgreSQL constituída pelas tabelas:
+
+- Utilizadores
+- Produtos
+- Vendas
+
+Foram implementadas chaves primárias e relações através de chaves estrangeiras.
+
+
+2. QUALIDADE DOS DADOS
+
+Foram implementadas regras de validação e limpeza dos dados.
+
+Entre as medidas aplicadas encontram-se:
+
+- Validação do formato dos emails;
+- Impedimento de preços negativos;
+- Limpeza de registos considerados inválidos.
+
+
+3. SEGURANÇA
+
+Foi criada a role:
+
+estagiario_leitor
+
+Foi atribuída permissão de leitura sobre a tabela Utilizadores.
+
+O objetivo é limitar o acesso aos dados de acordo com a função do utilizador.
+
+
+4. AUDITORIA
+
+Foi implementado um mecanismo de auditoria através de triggers.
+
+As alterações de preços dos produtos podem ser registadas com:
+
+- Produto alterado;
+- Preço anterior;
+- Novo preço;
+- Data da alteração.
+
+
+5. PRIVACIDADE
+
+Foi criada a View:
+
+Vendas_Anonimas
+
+Esta View permite apresentar informação de vendas sem expor diretamente determinados dados pessoais.
+
+
+6. OTIMIZAÇÃO
+
+Foram utilizados índices e consultas com EXPLAIN ANALYZE para analisar e melhorar o acesso aos dados.
+
+Também foi criado um índice parcial para determinadas consultas sobre a tabela Vendas.
+
+
+7. BUSINESS INTELLIGENCE
+
+Foi criada a View:
+
+Relatorio_Vendas_Mensal
+
+A View permite consultar informação agregada das vendas e calcular a receita através da relação entre Vendas e Produtos.
+
+Foi também criada uma consulta para identificar produtos com stock inferior a 5 unidades.
+
+
+8. COMUNICAÇÃO EXECUTIVA
+
+Foi criado um conjunto de consultas destinadas a apresentar informação de gestão de forma resumida.
+
+As consultas apresentam:
+
+- Quantidade vendida;
+- Faturação por produto;
+- Estado de desempenho;
+- Estado do stock.
+
+
+9. DISASTER RECOVERY
+
+Foi criado um plano de Disaster Recovery.
+
+O plano documenta:
+
+- Procedimentos de backup;
+- Recuperação através do Neon;
+- Testes de recuperação;
+- Estratégia 3-2-1;
+- Procedimentos de emergência;
+- Segurança das credenciais.
+
+
+10. DOCUMENTAÇÃO
+
+Foi criada documentação para reduzir a dependência do sistema em relação ao seu criador.
+
+O projeto possui documentação sobre:
+
+- Funcionamento;
+- Histórico de decisões;
+- Disaster Recovery;
+- Comunicação executiva;
+- Próximos passos.
+
+
+CONCLUSÃO
+
+O projeto passou de uma estrutura inicial de base de dados para um sistema organizado, documentado e preparado para operações de gestão, segurança, auditoria, recuperação e análise.
+
+As melhorias foram avaliadas principalmente através das funcionalidades implementadas e da redução de processos manuais, não tendo sido atribuídos valores de poupança de tempo que não tenham sido medidos diretamente.
