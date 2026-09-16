@@ -165,3 +165,14 @@ Foram consideradas as funcionalidades de recuperação disponibilizadas pelo Neo
 
 Também foi documentada a estratégia 3-2-1 como princípio de proteção contra a perda total dos dados.
 
+---
+
+## 14. Comunicação Executiva e Capacitação
+
+Foi criado um conjunto de consultas destinado a apresentar informação de gestão de forma resumida e compreensível.
+
+O ficheiro `hora32_comunicacao_executiva.sql` apresenta informação sobre vendas, faturação, desempenho e stock.
+
+Foi também criado o ficheiro `GUIOES_COMUNICACAO.md` para documentar a comunicação com utilizadores não técnicos e a estratégia de capacitação operacional.
+
+A estrutura foi adaptada às tabelas existentes no projeto, uma vez que a tabela `Vendas` não possui uma coluna de data.
