@@ -135,3 +135,18 @@ O plano inclui:
 - Scripts SQL para reconstrução da estrutura da base de dados.
 CREATE INDEX idx_utilizador_nome
 ON Utilizadores(nome);
+
+---
+
+## Comunicação Executiva
+
+A Hora 32 introduziu uma camada de comunicação executiva e capacitação operacional.
+
+Foi criado o ficheiro `hora32_comunicacao_executiva.sql`, que contém consultas preparadas para apresentar:
+
+- Quantidade de unidades vendidas;
+- Faturação por produto;
+- Estado de desempenho;
+- Estado do stock.
+
+Foi também criado o ficheiro `GUIOES_COMUNICACAO.md`, que documenta a estratégia de comunicação com a direção e a capacitação dos utilizadores.
