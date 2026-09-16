@@ -1,0 +1,112 @@
+GUIA DE UTILIZADOR - ORGANIZAÇÃO
+
+UFCD 10797 - Gestão e Armazenamento de Dados
+
+
+1. CONSULTAR OS DADOS
+
+A base de dados do projeto está alojada no PostgreSQL através do Neon.
+
+Para consultar os dados:
+
+1. Aceder ao projeto no Neon.
+2. Abrir o SQL Editor.
+3. Executar as consultas necessárias.
+4. Para consultar os relatórios de gestão, utilizar a View:
+
+   Relatorio_Vendas_Mensal
+
+5. Para consultar dados anonimizados, utilizar a View:
+
+   Vendas_Anonimas
+
+
+2. CONSULTAR O RELATÓRIO DE VENDAS
+
+No Neon SQL Editor executar:
+
+SELECT *
+FROM Relatorio_Vendas_Mensal;
+
+O relatório apresenta informação agregada das vendas, incluindo a quantidade vendida e a receita calculada através dos produtos.
+
+
+3. CONSULTAR STOCK CRÍTICO
+
+Para identificar produtos com stock inferior a 5 unidades:
+
+SELECT
+    titulo,
+    stock
+FROM Produtos
+WHERE stock < 5
+ORDER BY stock ASC;
+
+
+4. CONSULTAR DADOS ANONIMIZADOS
+
+Para consultar a informação de vendas sem apresentar diretamente o nome do cliente:
+
+SELECT *
+FROM Vendas_Anonimas;
+
+
+5. FAZER BACKUP
+
+Para realizar uma extração PostgreSQL através do pg_dump, utilizar:
+
+pg_dump "STRING_DE_LIGAÇÃO_DA_BASE_DE_DADOS" > backup_seguro.sql
+
+A string de ligação deve ser obtida no Neon e não deve ser guardada no GitHub.
+
+O ficheiro de backup deve ser armazenado num local seguro.
+
+
+6. RECUPERAÇÃO
+
+Em caso de falha ou eliminação acidental de dados:
+
+1. Não efetuar alterações adicionais na base de dados afetada.
+2. Identificar o ponto de recuperação ou backup disponível.
+3. Utilizar as funcionalidades de recuperação do Neon.
+4. Se necessário, utilizar os scripts SQL existentes no GitHub para reconstruir a estrutura.
+5. Validar as tabelas e os dados recuperados.
+6. Confirmar que o sistema está operacional.
+
+
+7. SCRIPTS DO PROJETO
+
+Os principais scripts SQL encontram-se no repositório GitHub.
+
+Entre eles:
+
+- setup_completo.sql
+- limpeza.sql
+- auditoria.sql
+- privacidade.sql
+- otimizacao_analitica.sql
+- dashboard.sql
+- hora32_comunicacao_executiva.sql
+
+
+8. SE EXISTIR UM PROBLEMA
+
+Antes de efetuar alterações:
+
+1. Identificar o problema.
+2. Não apagar ou alterar dados sem confirmar o procedimento.
+3. Consultar o plano de Disaster Recovery.
+4. Verificar os backups ou pontos de recuperação disponíveis.
+5. Registar a operação realizada.
+
+O objetivo é evitar alterações improvisadas e garantir que qualquer recuperação é realizada de forma controlada.
+
+
+9. REGRA PRINCIPAL
+
+Não alterar a estrutura ou os dados da base de dados sem compreender primeiro o impacto da alteração.
+
+Em caso de dúvida, consultar a documentação do projeto e o plano de recuperação.
+
+
+FIM DO GUIA
