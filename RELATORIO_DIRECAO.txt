@@ -1,0 +1,92 @@
+RELATÓRIO EXECUTIVO
+PROJETO ORGANIZAÇÃO DE DADOS
+
+UFCD 10797 - Gestão e Armazenamento de Dados
+
+1. MITIGAÇÃO DE RISCO
+
+A infraestrutura de dados do projeto foi consolidada numa solução PostgreSQL Cloud através do Neon.
+
+A utilização do Neon permite utilizar mecanismos de recuperação e Branching para criar ambientes de teste e recuperação sem depender exclusivamente de procedimentos manuais realizados num computador local.
+
+A estratégia de recuperação foi também documentada no Plano de Disaster Recovery, juntamente com os procedimentos de backup, validação e reconstrução da estrutura através dos scripts SQL versionados no GitHub.
+
+Desta forma, o projeto passa a possuir mecanismos documentados para responder a situações de falha, erro humano ou necessidade de recuperação de dados.
+
+A utilização de mecanismos cloud reduz a dependência de processos exclusivamente locais e permite uma abordagem mais estruturada à continuidade da infraestrutura.
+
+2. GANHO DE TEMPO E OTIMIZAÇÃO
+
+Durante o desenvolvimento foram implementados índices, consultas analíticas e mecanismos de análise através de EXPLAIN ANALYZE.
+
+Foi criado um índice sobre o nome dos utilizadores para otimizar pesquisas frequentes e também foi explorada a utilização de um índice parcial sobre a tabela Vendas.
+
+Foram ainda criadas consultas e Views destinadas a apresentar informação agregada sobre vendas, faturação e stock.
+
+A utilização destas estruturas permite reduzir a necessidade de cálculos manuais e preparar a informação para consultas de gestão.
+
+Não foram atribuídas percentagens específicas de redução de tempo, uma vez que não foi realizado um benchmark controlado antes e depois da otimização.
+
+3. AUTONOMIA E LEGADO
+
+A infraestrutura foi acompanhada por documentação técnica e operacional.
+
+Entre os principais documentos desenvolvidos encontram-se:
+
+* COMO_FUNCIONA.txt
+* O_QUE_FIZEMOS.txt
+* FUTURO_ORGANIZAÇÃO.txt
+* HISTORICO_DECISOES.md
+* disaster_recovery.md
+* GUIOES_COMUNICACAO.md
+
+Também foram mantidos scripts SQL versionados no GitHub, permitindo consultar e reconstruir as principais estruturas desenvolvidas durante o projeto.
+
+Esta documentação facilita a transferência de conhecimento e permite que outros colaboradores autorizados compreendam os procedimentos fundamentais sem depender exclusivamente do conhecimento do autor original.
+
+4. INFRAESTRUTURA CLOUD
+
+A utilização do Neon PostgreSQL permite centralizar a infraestrutura de dados num ambiente cloud.
+
+Através do Neon Console é possível consultar o estado da infraestrutura, utilizar o SQL Editor e trabalhar com mecanismos de Branching e recuperação disponibilizados pela plataforma.
+
+O projeto mantém igualmente os scripts SQL necessários para documentar a estrutura e as principais funcionalidades implementadas.
+
+5. MANUTENÇÃO OPERACIONAL
+
+Foi definida uma rotina de manutenção baseada em três áreas principais:
+
+* Verificação da infraestrutura;
+* Otimização e manutenção;
+* Acompanhamento das métricas.
+
+As verificações devem ser realizadas através de consultas SQL preparadas e da observação do estado da infraestrutura no Neon Console.
+
+A manutenção deve ser realizada de forma controlada, evitando alterações destrutivas nas tabelas principais.
+
+6. VALOR PARA A ORGANIZAÇÃO
+
+O projeto evoluiu de uma estrutura inicial de armazenamento de dados para uma infraestrutura documentada, versionada e preparada para operações de gestão.
+
+Entre os principais benefícios encontram-se:
+
+* Centralização dos dados;
+* Maior organização da informação;
+* Regras de qualidade dos dados;
+* Controlo de permissões;
+* Auditoria de alterações;
+* Proteção e anonimização de informação;
+* Consultas de gestão;
+* Documentação operacional;
+* Estratégia de recuperação;
+* Preparação para futuras automatizações.
+
+O objetivo da infraestrutura não é apenas armazenar dados, mas disponibilizar informação organizada e preparada para apoiar as operações da Organização.
+
+7. CONCLUSÃO
+
+A Hora 40 representa a consolidação da infraestrutura desenvolvida ao longo da UFCD 10797.
+
+A utilização do PostgreSQL Cloud através do Neon, juntamente com os scripts SQL, documentação, mecanismos de recuperação e ferramentas de análise, permite apresentar o projeto como uma infraestrutura de dados organizada e preparada para evolução futura.
+
+O trabalho desenvolvido estabelece uma base para futuras funcionalidades, como dashboards visuais, automatização de backups, integração com fornecedores e redução adicional de tarefas manuais.
