@@ -152,3 +152,16 @@ Após a conclusão das tarefas previstas, o projeto foi consolidado na versão:
 `v1.0`
 
 Esta versão representa a entrega final do projeto desenvolvido no âmbito da UFCD 10797 - Gestão e Armazenamento de Dados.
+
+---
+
+## 13. Disaster Recovery e Resiliência
+
+Foi criado um plano de Disaster Recovery para preparar o sistema para situações de falha, erro humano ou perda de dados.
+
+O plano documenta os procedimentos de backup, recuperação e teste de recuperação.
+
+Foram consideradas as funcionalidades de recuperação disponibilizadas pelo Neon, juntamente com os scripts SQL mantidos no GitHub para permitir a reconstrução da estrutura da base de dados.
+
+Também foi documentada a estratégia 3-2-1 como princípio de proteção contra a perda total dos dados.
+
