@@ -150,3 +150,15 @@ Foi criado o ficheiro `hora32_comunicacao_executiva.sql`, que contém consultas 
 - Estado do stock.
 
 Foi também criado o ficheiro `GUIOES_COMUNICACAO.md`, que documenta a estratégia de comunicação com a direção e a capacitação dos utilizadores.
+
+---
+
+## Autonomia Operacional e Visão Futura
+
+Como parte da consolidação final do projeto, foram criados três documentos de autonomia e planeamento:
+
+- `COMO_FUNCIONA.txt` — manual de utilização e procedimentos operacionais;
+- `O_QUE_FIZEMOS.txt` — registo das melhorias implementadas;
+- `FUTURO_ORGANIZAÇÃO.txt` — roadmap tecnológico e próximos passos.
+
+Estes documentos permitem reduzir a dependência do sistema em relação ao seu criador, facilitar a transferência de conhecimento e documentar a evolução futura da Organização.
