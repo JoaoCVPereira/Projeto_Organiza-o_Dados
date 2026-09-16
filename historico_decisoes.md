@@ -176,3 +176,21 @@ O ficheiro `hora32_comunicacao_executiva.sql` apresenta informação sobre venda
 Foi também criado o ficheiro `GUIOES_COMUNICACAO.md` para documentar a comunicação com utilizadores não técnicos e a estratégia de capacitação operacional.
 
 A estrutura foi adaptada às tabelas existentes no projeto, uma vez que a tabela `Vendas` não possui uma coluna de data.
+
+---
+
+## 15. Autonomia Operacional
+
+Foram criados três documentos finais destinados a garantir a continuidade e transferência de conhecimento:
+
+- `COMO_FUNCIONA.txt`
+- `O_QUE_FIZEMOS.txt`
+- `FUTURO_ORGANIZAÇÃO.txt`
+
+O `COMO_FUNCIONA.txt` documenta os procedimentos necessários para consultar e manter o sistema.
+
+O `O_QUE_FIZEMOS.txt` regista as principais melhorias implementadas durante o projeto.
+
+O `FUTURO_ORGANIZAÇÃO.txt` apresenta um roadmap para futuras melhorias tecnológicas.
+
+A decisão de separar estes conteúdos em documentos próprios permite facilitar a utilização do sistema por outros colaboradores e reduzir a dependência do conhecimento individual.
