@@ -1,0 +1,82 @@
+FUTURO DA ORGANIZAÇÃO
+
+ROADMAP TECNOLÓGICO
+
+
+Objetivo
+
+Depois de estabilizar a infraestrutura de dados, o próximo passo será continuar a reduzir processos manuais e disponibilizar a informação de forma mais rápida às diferentes áreas da Organização.
+
+
+1. PORTAL PARA FORNECEDORES
+
+Criar um sistema através do qual os fornecedores possam atualizar diretamente a informação dos produtos e do stock.
+
+Objetivos:
+
+- Reduzir introdução manual de dados;
+- Diminuir erros;
+- Manter o stock atualizado;
+- Facilitar a comunicação com fornecedores.
+
+
+2. AUTOMATIZAÇÃO DE COMUNICAÇÃO COM CLIENTES
+
+Criar uma solução que permita utilizar os dados dos clientes para comunicações automáticas, respeitando as regras de proteção de dados.
+
+Objetivos:
+
+- Automatizar comunicações;
+- Reduzir tarefas repetitivas;
+- Melhorar a organização da informação;
+- Permitir campanhas e notificações de forma controlada.
+
+
+3. DASHBOARD DE GESTÃO
+
+Evoluir o atual sistema de consultas para um dashboard visual.
+
+O dashboard poderá apresentar:
+
+- Vendas;
+- Faturação;
+- Stock;
+- Produtos com maior procura;
+- Alertas;
+- Indicadores de desempenho.
+
+
+4. AUTOMATIZAÇÃO DE BACKUPS
+
+Evoluir o atual processo documentado de backup para uma solução automatizada.
+
+Objetivos:
+
+- Reduzir intervenção manual;
+- Criar backups regulares;
+- Registar operações;
+- Facilitar testes de recuperação.
+
+
+5. EVOLUÇÃO DO SISTEMA
+
+A evolução deverá manter os princípios definidos durante o projeto:
+
+- Simplicidade;
+- Segurança;
+- Documentação;
+- Recuperação;
+- Proteção dos dados;
+- Redução de tarefas manuais.
+
+
+PRÓXIMO CICLO
+
+A prioridade inicial será desenvolver um portal de integração para fornecedores e evoluir o dashboard de gestão.
+
+O objetivo é transformar progressivamente a infraestrutura de dados numa plataforma que apoie diretamente as operações da Organização.
+
+
+VISÃO
+
+A Organização deverá continuar a utilizar os dados como suporte às suas operações e decisões, mantendo uma infraestrutura simples, segura, documentada e preparada para crescer.
