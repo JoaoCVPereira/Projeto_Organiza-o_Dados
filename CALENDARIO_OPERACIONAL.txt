@@ -1,0 +1,133 @@
+CALENDÁRIO OPERACIONAL
+ENGENHEIRO DE CONTINUIDADE CLOUD
+
+UFCD 10797 - Gestão e Armazenamento de Dados
+Projeto: Organização de Dados
+
+
+=====================================================
+SEGUNDA-FEIRA - 09:00 - 09:10
+DIAGNÓSTICO DE ARRANQUE
+=====================================================
+
+1. Aceder ao Neon Console.
+
+2. Validar se o Compute Endpoint no Neon Console
+   transitou do estado Idle para Active sem erros.
+
+3. Executar a consulta de verificação de conexões
+   ativas e bloqueios no SQL Editor:
+
+SELECT pid, usename, state, query,
+age(clock_timestamp(), query_start)
+FROM pg_stat_activity
+WHERE state != 'idle';
+
+Objetivo:
+
+Confirmar a conectividade, o estado das sessões e
+detetar processos pendentes que possam consumir
+recursos do Compute Endpoint.
+
+
+=====================================================
+SEXTA-FEIRA - 17:00 - 17:15
+AUDITORIA DE SALVAGUARDA
+=====================================================
+
+1. Aceder ao Neon Console.
+
+2. Confirmar a existência de snapshots automáticos
+   gerados pela plataforma.
+
+3. Gerar uma cópia lógica externa através do
+   terminal utilizando pg_dump para um repositório
+   secundário.
+
+4. Reportar à Direção o relatório de disponibilidade
+   e estabilidade do serviço.
+
+Objetivo:
+
+Assegurar redundância e acompanhar a estabilidade
+da infraestrutura Cloud.
+
+
+=====================================================
+1ª SEGUNDA-FEIRA DO MÊS
+MANUTENÇÃO PREVENTIVA
+=====================================================
+
+1. Executar:
+
+VACUUM ANALYZE;
+
+2. Limpar registos obsoletos.
+
+3. Verificar a quota de disco consumida na consola
+   Neon.
+
+Objetivo:
+
+Realizar manutenção preventiva, reorganizar o
+armazenamento e atualizar as estatísticas utilizadas
+pelo otimizador de consultas.
+
+
+=====================================================
+GESTÃO DE INCIDENTES
+=====================================================
+
+Sempre que ocorrer um incidente:
+
+1. Identificar o erro.
+
+2. Identificar a causa raiz, quando possível.
+
+3. Aplicar a solução adequada.
+
+4. Registar o incidente na tabela:
+
+tb_log_incidentes
+
+5. Registar:
+   - Descrição do erro;
+   - Causa raiz;
+   - Solução aplicada;
+   - Responsável;
+   - Data da ocorrência.
+
+
+=====================================================
+RECUPERAÇÃO
+=====================================================
+
+Em caso de falha:
+
+1. Identificar o problema.
+
+2. Utilizar os mecanismos de recuperação disponíveis
+   no Neon.
+
+3. Restaurar um ponto no tempo através de PITR,
+   quando aplicável.
+
+4. Em alternativa, utilizar uma Branch de segurança.
+
+5. Validar a integridade da base de dados.
+
+6. Confirmar o restabelecimento do serviço.
+
+7. Registar o incidente na tabela
+   tb_log_incidentes.
+
+
+=====================================================
+OBJETIVO
+=====================================================
+
+O calendário operacional transforma a manutenção da
+infraestrutura Cloud numa rotina preventiva e
+estruturada.
+
+FIM DO CALENDÁRIO
