@@ -1,0 +1,122 @@
+PROTOCOLO DE COMUNICAÇÃO E GESTÃO DE INCIDÊNCIAS
+SLA DE SERVIÇO
+
+UFCD 10797 - Gestão e Armazenamento de Dados
+Projeto: Organização de Dados
+
+
+=====================================================
+1. OBJETIVO
+=====================================================
+
+Este protocolo define a forma de comunicação perante
+uma eventual interrupção ou indisponibilidade do
+serviço PostgreSQL Cloud.
+
+O objetivo é garantir transparência técnica e uma
+comunicação estruturada com a Direção.
+
+
+=====================================================
+2. COMUNICAÇÃO DE INDISPONIBILIDADE
+=====================================================
+
+Perante uma interrupção de serviço, deverá ser
+utilizado o seguinte guião:
+
+"Detetámos uma indisponibilidade temporária na ligação
+ao endpoint PostgreSQL na nuvem.
+
+O protocolo de recuperação já foi iniciado através
+do painel de controlo Neon, utilizando a alternância
+de Branch ou o Restauro PITR, quando aplicável.
+
+Prevemos o restabelecimento total em X minutos,
+sem perda de integridade dos dados registados."
+
+
+=====================================================
+3. GESTÃO DO INCIDENTE
+=====================================================
+
+Após a deteção:
+
+1. Identificar a indisponibilidade.
+
+2. Verificar o estado da infraestrutura no Neon
+   Console.
+
+3. Identificar a causa do incidente.
+
+4. Iniciar o procedimento de recuperação adequado.
+
+5. Validar a integridade dos dados.
+
+6. Confirmar o restabelecimento do serviço.
+
+7. Registar o incidente em:
+
+   tb_log_incidentes
+
+
+=====================================================
+4. INFORMAÇÃO A COMUNICAR À DIREÇÃO
+=====================================================
+
+Durante um incidente devem ser comunicados:
+
+- Estado atual do serviço;
+- Problema identificado;
+- Causa conhecida, quando disponível;
+- Procedimento de recuperação iniciado;
+- Tempo estimado para recuperação;
+- Estado final após a recuperação.
+
+
+=====================================================
+5. REGISTO DE INCIDENTES
+=====================================================
+
+Todos os incidentes relevantes devem ser registados
+na tabela:
+
+tb_log_incidentes
+
+O registo deve conter:
+
+- ID do incidente;
+- Data da ocorrência;
+- Descrição do erro;
+- Causa raiz;
+- Solução aplicada;
+- Responsável.
+
+
+=====================================================
+6. TRANSPARÊNCIA
+=====================================================
+
+A comunicação com a Direção deve ser clara e objetiva.
+
+A informação apresentada deve refletir o estado
+real da infraestrutura e os procedimentos efetivamente
+realizados.
+
+Os tempos de recuperação comunicados devem ser
+atualizados de acordo com o estado real do incidente.
+
+
+=====================================================
+7. OBJETIVO DO SLA
+=====================================================
+
+O protocolo pretende garantir uma resposta organizada
+a incidentes, reduzir o tempo de indisponibilidade e
+preservar a integridade dos dados.
+
+A existência de procedimentos definidos permite
+substituir uma resposta exclusivamente reativa por
+uma gestão operacional estruturada.
+
+
+FIM DO PROTOCOLO
