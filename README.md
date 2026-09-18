@@ -158,6 +158,26 @@ Foi também criado o ficheiro `GUIOES_COMUNICACAO.md`, que documenta a estratég
 Como parte da consolidação final do projeto, foram criados três documentos de autonomia e planeamento:
 
 - `COMO_FUNCIONA.txt` — manual de utilização e procedimentos operacionais;
+
+- ---
+
+## Continuidade Cloud, Gestão de Incidentes e SLA
+
+Na Hora 44 foi implementada uma camada de continuidade operacional para a infraestrutura PostgreSQL Cloud.
+
+Foi criada a tabela `tb_log_incidentes`, destinada ao registo centralizado de incidentes, causas, soluções e responsáveis.
+
+Também foram implementadas rotinas de monitorização através de `pg_stat_activity` e manutenção preventiva através de `VACUUM ANALYZE`.
+
+Foram adicionados os seguintes ficheiros:
+
+- `00_CONTINUIDADE_E_INCIDENTES.sql`
+- `CALENDARIO_OPERACIONAL.txt`
+- `PROTOCOLO_SLA.txt`
+
+O calendário operacional define rotinas de diagnóstico, auditoria de salvaguarda e manutenção preventiva.
+
+O protocolo SLA define os procedimentos de comunicação e gestão perante uma eventual indisponibilidade da infraestrutura Cloud.
 - `O_QUE_FIZEMOS.txt` — registo das melhorias implementadas;
 - `FUTURO_ORGANIZAÇÃO.txt` — roadmap tecnológico e próximos passos.
 
