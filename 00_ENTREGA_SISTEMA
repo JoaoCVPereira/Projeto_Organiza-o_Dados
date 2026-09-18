@@ -1,0 +1,7 @@
+-- =====================================================
+-- 00_ENTREGA_SISTEMA
+-- CONSULTA FINAL DE HANDOFF
+-- =====================================================
+
+SELECT *
+FROM v_handoff_sistema;
