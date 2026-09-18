@@ -182,3 +182,42 @@ O protocolo SLA define os procedimentos de comunicação e gestão perante uma e
 - `FUTURO_ORGANIZAÇÃO.txt` — roadmap tecnológico e próximos passos.
 
 Estes documentos permitem reduzir a dependência do sistema em relação ao seu criador, facilitar a transferência de conhecimento e documentar a evolução futura da Organização.
+
+---
+
+## Transição Cloud e Encerramento Global
+
+Na Hora 50 foi realizada a consolidação final da infraestrutura PostgreSQL Cloud e definido o protocolo de passagem de testemunho.
+
+Foi criada a View:
+
+`v_handoff_sistema`
+
+Esta View centraliza informação relativa à consola principal, procedimentos operacionais, recuperação por ponto no tempo e acesso aos relatórios de negócio.
+
+Foi também criada a tabela:
+
+`tb_historico_melhorias`
+
+Esta tabela funciona como diário de bordo para registar melhorias e acontecimentos relevantes durante a evolução da infraestrutura.
+
+Foram adicionados os seguintes scripts:
+
+- `v_handoff_sistema.sql`
+- `limpeza_e_encerramento.sql`
+
+Durante o encerramento foram igualmente definidos procedimentos para eliminar tabelas temporárias ou rascunhos de testes através de `DROP TABLE IF EXISTS`.
+
+---
+
+## Teste de Férias
+
+Foi definido um procedimento de validação da autonomia operacional através do chamado "Teste de Férias".
+
+O objetivo é permitir que um operador autorizado consiga consultar a documentação e os procedimentos disponíveis no Neon SQL Editor sem depender de intervenção técnica direta.
+
+A consulta principal de handoff é:
+
+```sql
+SELECT *
+FROM v_handoff_sistema;
